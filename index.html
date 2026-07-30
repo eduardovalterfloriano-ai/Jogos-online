@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Games | Jogos Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="logo">NEXUS<span>GAMES</span></div>
+        <nav>
+            <ul>
+                <li><a href="#home">Início</a></li>
+                <li><a href="#destaques">Destaques</a></li>
+                <li><a href="#trailers">Trailers</a></li>
+                <li><a href="#comunidade">Comunidade</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>O UNIVERSO DOS JOGOS ONLINE</h1>
+            <p>Conecte-se, jogue e domine as arenas com os melhores títulos do momento.</p>
+            <a href="#destaques" class="btn">Explorar Jogos</a>
+        </div>
+    </section>
+
+    <section id="destaques" class="container">
+        <h2>Jogos em Destaque</h2>
+        <div class="cards-grid">
+            
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Cyber Battle">
+                <div class="card-info">
+                    <span class="tag">Battle Royale</span>
+                    <h3>Cyber Battle 2077</h3>
+                    <p>Entre na arena futurista e batalhe contra jogadores do mundo todo.</p>
+                    <button class="btn-card" onclick="jogar('Cyber Battle')">Jogar Agora</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Shadow Realm">
+                <div class="card-info">
+                    <span class="tag">MMORPG</span>
+                    <h3>Shadow Realm</h3>
+                    <p>Explore calabouços sombrios e crie alianças imbatíveis.</p>
+                    <button class="btn-card" onclick="jogar('Shadow Realm')">Jogar Agora</button>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80" alt="Speed Racers">
+                <div class="card-info">
+                    <span class="tag">Corrida</span>
+                    <h3>Speed Racers Online</h3>
+                    <p>Acelere a mais de 300km/h em pistas desafiadoras ao vivo.</p>
+                    <button class="btn-card" onclick="jogar('Speed Racers')">Jogar Agora</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="trailers" class="container">
+        <h2>Trailers & Gameplay</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Game Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Nexus Games. Criado para o GitHub Pages.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
