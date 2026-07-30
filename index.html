@@ -1,82 +1,104 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Games | Jogos Online</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;800&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nexus Games | CS2 & FURIA Esports</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="logo">NEXUS<span>GAMES</span></div>
-        <nav>
-            <ul>
-                <li><a href="#home">Início</a></li>
-                <li><a href="#destaques">Destaques</a></li>
-                <li><a href="#trailers">Trailers</a></li>
-                <li><a href="#comunidade">Comunidade</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header class="header">
+    <div class="logo">
+      NEXUS<span>GAMES</span>
+    </div>
+    <nav class="nav">
+      <a href="#inicio">Início</a>
+      <a href="#cs2">Sobre o CS2</a>
+      <a href="#furia">FURIA Esports</a>
+      <a href="#highlights">Highlights</a>
+      <a href="#comunidade">Comunidade</a>
+    </nav>
+  </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>O UNIVERSO DOS JOGOS ONLINE</h1>
-            <p>Conecte-se, jogue e domine as arenas com os melhores títulos do momento.</p>
-            <a href="#destaques" class="btn">Explorar Jogos</a>
-        </div>
-    </section>
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <span class="badge">JOGOS ONLINE</span>
+      <h1>COUNTER-STRIKE 2</h1>
+      <p>A nova era do tiro tático chegou. Gráficos reformulados, sub-tick rate revolucionário e a paixão do cenário competitivo brasileiro.</p>
+      <a href="#highlights" class="btn-primary">Ver Highlight FURIA</a>
+    </div>
+  </section>
 
-    <section id="destaques" class="container">
-        <h2>Jogos em Destaque</h2>
-        <div class="cards-grid">
-            
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80" alt="Cyber Battle">
-                <div class="card-info">
-                    <span class="tag">Battle Royale</span>
-                    <h3>Cyber Battle 2077</h3>
-                    <p>Entre na arena futurista e batalhe contra jogadores do mundo todo.</p>
-                    <button class="btn-card" onclick="jogar('Cyber Battle')">Jogar Agora</button>
-                </div>
-            </div>
+  <section id="cs2" class="section">
+    <h2 class="title-section">O que há de novo no <span>CS2</span>?</h2>
+    <div class="cards-grid">
+      
+      <div class="card">
+        <span class="card-tag">SUB-TICK</span>
+        <h3>Precisão Absoluta</h3>
+        <p>A arquitetura de atualização entre tiques permite que os servidores saibam exatamente o momento em que você atira ou lança uma granada.</p>
+        <details class="info-detalhes">
+          <summary class="btn-info">Saiba Mais</summary>
+          <div class="detalhes-conteudo">
+            <p><strong>Impacto no jogo:</strong> Resposta instantânea nos confrontos e maior consistência no registro de tiros.</p>
+          </div>
+        </details>
+      </div>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=600&q=80" alt="Shadow Realm">
-                <div class="card-info">
-                    <span class="tag">MMORPG</span>
-                    <h3>Shadow Realm</h3>
-                    <p>Explore calabouços sombrios e crie alianças imbatíveis.</p>
-                    <button class="btn-card" onclick="jogar('Shadow Realm')">Jogar Agora</button>
-                </div>
-            </div>
+      <div class="card">
+        <span class="card-tag">FUMAÇA DINÂMICA</span>
+        <h3>Granadas de Fumaça</h3>
+        <p>As fumaças agora são objetos volumétricos em 3D que reagem à iluminação, disparos e explosões no mapa.</p>
+        <details class="info-detalhes">
+          <summary class="btn-info">Saiba Mais</summary>
+          <div class="detalhes-conteudo">
+            <p><strong>Estratégia:</strong> Balas e granadas de impacto abrem brechas temporárias na fumaça para criar linhas de visão.</p>
+          </div>
+        </details>
+      </div>
 
-            <div class="card">
-                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=600&q=80" alt="Speed Racers">
-                <div class="card-info">
-                    <span class="tag">Corrida</span>
-                    <h3>Speed Racers Online</h3>
-                    <p>Acelere a mais de 300km/h em pistas desafiadoras ao vivo.</p>
-                    <button class="btn-card" onclick="jogar('Speed Racers')">Jogar Agora</button>
-                </div>
-            </div>
+      <div class="card">
+        <span class="card-tag">E-SPORTS</span>
+        <h3>Cenário Competitivo</h3>
+        <p>O CS2 mantém a tradição dos maiores torneios mundiais, com premiações milionárias e o Brasil no topo da disputa.</p>
+        <details class="info-detalhes">
+          <summary class="btn-info">Saiba Mais</summary>
+          <div class="detalhes-conteudo">
+            <p><strong>Circuitos:</strong> IEM, ESL Pro League, BLAST Premier e os cobiçados Majors da Valve.</p>
+          </div>
+        </details>
+      </div>
 
-        </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="trailers" class="container">
-        <h2>Trailers & Gameplay</h2>
-        <div class="video-container">
-            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" title="Game Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-    </section>
+  <section id="highlights" class="section video-section">
+    <h2 class="title-section">FURIA vs <span>Team Spirit</span></h2>
+    <p class="section-subtitle">Acompanhe os melhores momentos da FURIA Esports no confronto histórico contra a Spirit!</p>
+    
+    <div class="video-wrapper">
+      <iframe 
+        src="https://www.youtube.com/embed/VmdLFYKrkss" 
+        title="Highlight FURIA vs Team Spirit - CS2" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
 
-    <footer>
-        <p>&copy; 2026 Nexus Games. Criado para o GitHub Pages.</p>
-    </footer>
+    <div class="video-info">
+      <h3>Destaques da Partida</h3>
+      <p>Uma exibição incrível de tática, miras calibradas e a garra brasileira em quadra contra uma das equipes mais fortes do mundo.</p>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <footer class="footer">
+    <p>&copy; 2026 Nexus Games - Portal Informativo sobre CS2 & Esports.</p>
+  </footer>
+
 </body>
 </html>
