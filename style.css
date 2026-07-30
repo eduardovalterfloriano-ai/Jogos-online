@@ -1,4 +1,3 @@
-/* Reset Básico */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +16,6 @@ h1, h2, h3, .logo {
   font-family: 'Orbitron', sans-serif;
 }
 
-/* Cabeçalho */
 .header {
   display: flex;
   justify-content: space-between;
@@ -33,7 +31,7 @@ h1, h2, h3, .logo {
 .logo {
   font-size: 1.5rem;
   font-weight: 900;
-  color: #fff;
+  color: #ffffff;
   letter-spacing: 1px;
 }
 
@@ -53,7 +51,6 @@ h1, h2, h3, .logo {
   color: #00ff66;
 }
 
-/* Hero Section */
 .hero {
   background: linear-gradient(rgba(11, 14, 20, 0.85), rgba(11, 14, 20, 0.95)),
               url('https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200') center/cover no-repeat;
@@ -106,7 +103,6 @@ h1, h2, h3, .logo {
   box-shadow: 0 0 15px rgba(0, 255, 102, 0.4);
 }
 
-/* Seções */
 .section {
   padding: 4rem 5%;
   max-width: 1200px;
@@ -130,7 +126,6 @@ h1, h2, h3, .logo {
   margin-bottom: 2rem;
 }
 
-/* Grid de Cards */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -167,7 +162,6 @@ h1, h2, h3, .logo {
   margin-bottom: 1rem;
 }
 
-/* Botões Interativos */
 .btn-info {
   display: inline-block;
   padding: 0.5rem 1rem;
@@ -200,7 +194,6 @@ h1, h2, h3, .logo {
   display: block;
 }
 
-/* Vídeo Responsivo */
 .video-section {
   text-align: center;
 }
@@ -233,7 +226,6 @@ h1, h2, h3, .logo {
   margin: 0 auto;
 }
 
-/* Rodapé */
 .footer {
   text-align: center;
   padding: 2rem 5%;
