@@ -1,51 +1,217 @@
-/* ESTILOS DO CARD DIFERENTE (DESAFIO ALURA) */
-.card-desafio-especial {
-    background-color: #1e1e26;
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0b0c10;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* CABEÇALHO */
+.header {
+    background-color: #1f2833;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    border-bottom: 2px solid #66fcf1;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #66fcf1;
+}
+
+.nav a {
+    color: #c5c6c7;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #66fcf1;
+}
+
+/* HERO BANNER */
+.hero {
+    background: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.95));
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 1px solid #1f2833;
+}
+
+.badge-tag {
+    background-color: #45a29e;
+    color: #0b0c10;
+    padding: 4px 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 4px;
+    letter-spacing: 1px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+    color: #ffffff;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+    color: #c5c6c7;
+}
+
+.btn-hero {
+    background-color: #66fcf1;
+    color: #0b0c10;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: 0.3s;
+    display: inline-block;
+}
+
+.btn-hero:hover {
+    background-color: #45a29e;
+}
+
+/* LAYOUT E SEÇÕES */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.secao {
+    margin-bottom: 50px;
+}
+
+.secao h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    border-left: 4px solid #66fcf1;
+    padding-left: 10px;
+}
+
+/* CARDS NORMAIS */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: #1f2833;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #45a29e;
+}
+
+.categoria {
+    color: #66fcf1;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.card h3 {
+    margin: 8px 0;
+}
+
+.card p {
+    color: #c5c6c7;
+    font-size: 0.95rem;
+}
+
+.card .destaque {
+    margin-top: 10px;
+    font-size: 0.85rem;
+}
+
+/* CARD EM DESTAQUE (DESAFIO DA ALURA) */
+.card-destaque {
+    background: linear-gradient(145deg, #1f1a24, #120e17);
     border: 2px solid #ff4655;
     border-radius: 12px;
-    padding: 24px;
-    margin: 20px auto;
-    max-width: 600px;
-    position: relative;
-    box-shadow: 0 4px 15px rgba(255, 70, 85, 0.2);
+    padding: 30px;
+    box-shadow: 0 0 15px rgba(255, 70, 85, 0.3);
 }
 
-.badge-destaque {
+.badge-furia {
     background-color: #ff4655;
     color: white;
-    font-weight: bold;
-    padding: 6px 12px;
-    border-radius: 20px;
     font-size: 0.8rem;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 20px;
     display: inline-block;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
 }
 
-.interacao-container {
+.box-curtidas {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin: 15px 0;
-    padding: 10px;
+    gap: 20px;
+    margin-top: 25px;
     background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
     border-radius: 8px;
 }
 
+/* BOTÃO INTERATIVO */
 .btn-like {
     background-color: #ff4655;
     color: white;
     border: none;
-    padding: 8px 16px;
+    padding: 10px 20px;
     border-radius: 6px;
-    cursor: pointer;
+    font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
 }
 
 .btn-like:hover {
     background-color: #e03e4d;
+    transform: scale(1.05);
+}
+
+.btn-like:active {
+    transform: scale(0.95);
+}
+
+/* Estado quando for curtido */
+.btn-like.curtido {
+    background-color: #28a745;
 }
 
 .num-curtidas {
-    color: #cccccc;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: #0b0c10;
+    border-top: 1px solid #1f2833;
+    color: #c5c6c7;
+    font-size: 0.85rem;
 }
