@@ -1,18 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const botoesInfo = document.querySelectorAll('.btn-info');
+let curtidas = 0;
 
-  botoesInfo.forEach((botao) => {
-    botao.addEventListener('click', () => {
-      const card = botao.closest('.card');
-      const detalhes = card.querySelector('.detalhes-conteudo');
+const btnCurtir = document.getElementById('btn-curtir');
+const contador = document.getElementById('contador-curtidas');
 
-      detalhes.classList.toggle('ativo');
-
-      if (detalhes.classList.contains('ativo')) {
-        botao.textContent = 'Ocultar Informações';
-      } else {
-        botao.textContent = 'Saiba Mais';
-      }
-    });
-  });
+btnCurtir.addEventListener('click', () => {
+    curtidas++;
+    contador.textContent = `${curtidas} curtidas`;
 });
