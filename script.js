@@ -1,9 +1,22 @@
-let curtidas = 0;
+// VARIÁVEL PARA CONTAR AS CURTIDAS
+let quantidadeCurtidas = 0;
 
+// SELECIONANDO OS ELEMENTOS DO HTML
 const btnCurtir = document.getElementById('btn-curtir');
-const contador = document.getElementById('contador-curtidas');
+const contadorTexto = document.getElementById('contador-curtidas');
+const textoBotao = document.getElementById('texto-botao');
 
+// ADICIONANDO O EVENTO DE CLIQUE
 btnCurtir.addEventListener('click', () => {
-    curtidas++;
-    contador.textContent = `${curtidas} curtidas`;
+    // Incrementa +1
+    quantidadeCurtidas++;
+
+    // Atualiza o texto das curtidas
+    if (quantidadeCurtidas === 1) {
+        contadorTexto.textContent = "1 curtida";
+        textoBotao.textContent = "Curtido!";
+        btnCurtir.classList.add('curtido');
+    } else {
+        contadorTexto.textContent = `${quantidadeCurtidas} curtidas`;
+    }
 });
