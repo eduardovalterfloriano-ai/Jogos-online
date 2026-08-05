@@ -3,80 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Games | CS2 & FURIA Esports</title>
+    <title>Nexus Games | CS2 & FURIA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <div class="logo">
-            <h1>NEXUSGAMES</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#cs2">Sobre o CS2</a></li>
-                <li><a href="#highlights">Highlights</a></li>
-            </ul>
+    <header class="header">
+        <div class="logo">NEXUS<span>GAMES</span></div>
+        <nav class="nav">
+            <a href="#inicio">Início</a>
+            <a href="#cs2">Sobre o CS2</a>
+            <a href="#highlights">Highlights</a>
         </nav>
     </header>
 
     <section id="inicio" class="hero">
-        <p class="categoria">JOGOS ONLINE</p>
-        <h2>COUNTER-STRIKE 2</h2>
-        <p>A nova era do tiro tático chegou. Gráficos reformulados, sub-tick rate revolucionário e a paixão do cenário competitivo brasileiro.</p>
-        <a href="#highlights" class="btn-principal">Ver Highlights FURIA</a>
-    </section>
-
-    <section id="cs2" class="novidades">
-        <h2>O que há de novo no CS2?</h2>
-        
-        <div class="cards-container">
-            <article class="card">
-                <span class="subtitulo">SUB-TICK</span>
-                <h3>Precisão Absoluta</h3>
-                <p>A arquitetura de atualização entre tiques permite que os servidores saibam exatamente o momento em que você atira ou lança uma granada.</p>
-                <p><strong>Impacto no jogo:</strong> Resposta instantânea nos confrontos e maior consistência no registro de tiros.</p>
-            </article>
-
-            <article class="card">
-                <span class="subtitulo">FUMAÇA DINÂMICA</span>
-                <h3>Granadas de Fumaça</h3>
-                <p>As fumaças agora são objetos volumétricos em 3D que reagem à iluminação, disparos e explosões no mapa.</p>
-                <p><strong>Estratégia:</strong> Balas e granadas de impacto abrem brechas temporárias na fumaça para criar linhas de visão.</p>
-            </article>
-
-            <article class="card">
-                <span class="subtitulo">E-SPORTS</span>
-                <h3>Cenário Competitivo</h3>
-                <p>O CS2 mantém a tradição dos maiores torneios mundiais, com premiações milionárias e o Brasil no topo da disputa.</p>
-                <p><strong>Circuitos:</strong> IEM, ESL Pro League, BLAST Premier e os cobiçados Majors da Valve.</p>
-            </article>
+        <div class="hero-content">
+            <span class="badge-tag">JOGOS ONLINE</span>
+            <h1>COUNTER-STRIKE 2</h1>
+            <p>A nova era do tiro tático chegou. Gráficos reformulados, sub-tick rate revolucionário e a paixão do cenário competitivo brasileiro.</p>
+            <a href="#highlights" class="btn-hero">Ver Highlights FURIA</a>
         </div>
     </section>
 
-    <section id="highlights" class="highlights-section">
-        <h2>Melhores Momentos da FURIA</h2>
+    <main class="container">
         
-        <article class="card-desafio-especial">
-            <div class="badge-destaque">🔥 EM DESTAQUE</div>
+        <section id="cs2" class="secao">
+            <h2>O que há de novo no CS2?</h2>
             
-            <h3>Destaques da Trajetória Pantera</h3>
-            
-            <div class="interacao-container">
-                <button id="btn-curtir" class="btn-like">❤️ Curtir Post</button>
-                <span id="contador-curtidas" class="num-curtidas">0 curtidas</span>
-            </div>
+            <div class="grid-cards">
+                <article class="card">
+                    <span class="categoria">SUB-TICK</span>
+                    <h3>Precisão Absoluta</h3>
+                    <p>A arquitetura de atualização entre tiques permite que os servidores saibam exatamente o momento em que você atira ou lança uma granada.</p>
+                    <p class="destaque"><strong>Impacto no jogo:</strong> Resposta instantânea nos confrontos e maior consistência no registro de tiros.</p>
+                </article>
 
-            <p class="descricao-post">
-                Uma compilação imperdível reunindo a garra, as táticas agressivas e os grandes destaques da pantera nos palcos do e-sports mundial. Confira 20 minutos com as jogadas mais espetaculares, clutches e miras insanas!
-            </p>
-        </article>
-    </section>
+                <article class="card">
+                    <span class="categoria">FUMAÇA DINÂMICA</span>
+                    <h3>Granadas de Fumaça</h3>
+                    <p>As fumaças agora são objetos volumétricos em 3D que reagem à iluminação, disparos e explosões no mapa.</p>
+                    <p class="destaque"><strong>Estratégia:</strong> Balas e granadas abrem brechas temporárias na fumaça para criar linhas de visão.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="highlights" class="secao">
+            <h2>Melhores Momentos da FURIA</h2>
+            
+            <article class="card-destaque">
+                <div class="badge-furia">🔥 POST EM DESTAQUE</div>
+                
+                <h3>Destaques da Trajetória Pantera</h3>
+                
+                <p>Uma compilação imperdível reunindo a garra, as táticas agressivas e os grandes destaques da FURIA nos palcos do e-sports mundial!</p>
+
+                <div class="box-curtidas">
+                    <button id="btn-curtir" class="btn-like">
+                        ❤️ <span id="texto-botao">Curtir Post</span>
+                    </button>
+                    <span id="contador-curtidas" class="num-curtidas">0 curtidas</span>
+                </div>
+            </article>
+        </section>
+
+    </main>
 
     <footer>
         <p>&copy; 2026 Nexus Games - Portal Informativo sobre CS2 & Esports.</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
