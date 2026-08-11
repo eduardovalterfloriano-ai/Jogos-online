@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Nexus Games carregado com sucesso!');
+    console.log('Nexus Games inicializado!');
 
-    // 1. Destacar o link ativo do menu
+    // 1. Alternar estado ativo no menu
     const navLinks = document.querySelectorAll('.nav-link');
-
     navLinks.forEach(link => {
         link.addEventListener('click', function () {
             navLinks.forEach(item => item.classList.remove('active'));
@@ -11,23 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 2. Exemplo de lista de jogos para renderizar na tela
+    // 2. Dados dos jogos que serão inseridos na tela
     const jogos = [
         {
             titulo: 'Counter-Strike 2',
-            categoria: 'FPS',
-            imagem: 'https://via.placeholder.com/300x180',
+            categoria: 'FPS / Competitivo',
+            imagem: 'https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&q=80',
             link: '#'
         },
         {
-            titulo: 'FURIA Esports Highlights',
-            categoria: 'Notícias / CS2',
-            imagem: 'https://via.placeholder.com/300x180',
+            titulo: 'FURIA Esports',
+            categoria: 'Notícias & Highlights',
+            imagem: 'https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&q=80',
             link: '#'
         }
     ];
 
-    // Função para carregar os jogos no container (se existir no seu HTML)
+    // 3. Renderização automática dos cards no HTML
     const containerJogos = document.getElementById('grid-jogos');
 
     if (containerJogos) {
