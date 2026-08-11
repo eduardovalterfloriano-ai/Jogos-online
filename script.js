@@ -1,38 +1,50 @@
-// Aguarda todo o HTML da página carregar antes de executar a lógica
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // 1. Variável para guardar a quantidade de curtidas
-    let quantidadeCurtidas = 0;
+    console.log('Nexus Games carregado com sucesso!');
 
-    // 2. Mapeia os elementos do HTML pelos seus IDs
-    const btnCurtir = document.getElementById('btn-curtir');
-    const textoContador = document.getElementById('contador-curtidas');
-    const textoBotao = document.getElementById('texto-botao');
+    // 1. Destacar o link ativo do menu
+    const navLinks = document.querySelectorAll('.nav-link');
 
-    // 3. Verifica se os elementos existem na página antes de adicionar a ação
-    if (btnCurtir && textoContador) {
-        
-        btnCurtir.addEventListener('click', () => {
-            // Incrementa +1 a cada clique
-            quantidadeCurtidas++;
-
-            // Atualiza o texto do contador no HTML
-            if (quantidadeCurtidas === 1) {
-                textoContador.textContent = "1 curtida";
-                if (textoBotao) textoBotao.textContent = "Curtido!";
-            } else {
-                textoContador.textContent = `${quantidadeCurtidas} curtidas`;
-            }
-
-            // Animação/Efeito visual simples de clique
-            btnCurtir.style.transform = "scale(0.95)";
-            setTimeout(() => {
-                btnCurtir.style.transform = "scale(1)";
-            }, 100);
+    navLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            navLinks.forEach(item => item.classList.remove('active'));
+            this.classList.add('active');
         });
+    });
 
-    } else {
-        console.warn("Elementos do botão de curtir não foram encontrados no HTML.");
+    // 2. Exemplo de lista de jogos para renderizar na tela
+    const jogos = [
+        {
+            titulo: 'Counter-Strike 2',
+            categoria: 'FPS',
+            imagem: 'https://via.placeholder.com/300x180',
+            link: '#'
+        },
+        {
+            titulo: 'FURIA Esports Highlights',
+            categoria: 'Notícias / CS2',
+            imagem: 'https://via.placeholder.com/300x180',
+            link: '#'
+        }
+    ];
+
+    // Função para carregar os jogos no container (se existir no seu HTML)
+    const containerJogos = document.getElementById('grid-jogos');
+
+    if (containerJogos) {
+        jogos.forEach(jogo => {
+            const card = document.createElement('div');
+            card.classList.add('card-jogo');
+
+            card.innerHTML = `
+                <img src="${jogo.imagem}" alt="${jogo.titulo}">
+                <div class="card-info">
+                    <span class="categoria">${jogo.categoria}</span>
+                    <h3>${jogo.titulo}</h3>
+                    <a href="${jogo.link}" class="btn-jogar">Acessar</a>
+                </div>
+            `;
+
+            containerJogos.appendChild(card);
+        });
     }
-
 });
