@@ -106,4 +106,118 @@
 
         .btn-jogar {
             display: inline-block;
-            width: 100
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #00e676;
+            color: #0e0f12;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        /* Área do Botão de Curtida */
+        .like-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #0e0f12;
+            padding: 8px 12px;
+            border-radius: 6px;
+            border: 1px solid #252836;
+        }
+
+        .btn-like {
+            background: transparent;
+            border: none;
+            color: #888;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: color 0.2s, transform 0.2s;
+        }
+
+        .btn-like:hover {
+            transform: scale(1.15);
+        }
+
+        .btn-like.curtido {
+            color: #ff4757; /* Cor vermelha quando curte */
+        }
+
+        .like-count {
+            font-size: 0.85rem;
+            color: #aaaaaa;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            NEXUS<span>GAMES</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#" class="nav-link">Início</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Jogos & Destaques</h1>
+        <div id="grid-jogos" class="grid-jogos">
+            
+            <div class="card-jogo">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&q=80" alt="CS2">
+                <div class="card-info">
+                    <span class="categoria">FPS / Competitivo</span>
+                    <h3>Counter-Strike 2</h3>
+                    <a href="#" class="btn-jogar">Acessar</a>
+                    
+                    <div class="like-container">
+                        <button class="btn-like" onclick="alternarCurtida(this)">❤️</button>
+                        <span class="like-count"><span class="qtd">0</span> curtidas</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-jogo">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&q=80" alt="FURIA">
+                <div class="card-info">
+                    <span class="categoria">Notícias & Highlights</span>
+                    <h3>FURIA Esports</h3>
+                    <a href="#" class="btn-jogar">Acessar</a>
+
+                    <div class="like-container">
+                        <button class="btn-like" onclick="alternarCurtida(this)">❤️</button>
+                        <span class="like-count"><span class="qtd">0</span> curtidas</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script>
+        function alternarCurtida(botao) {
+            // Localiza o elemento numérico dentro do mesmo card
+            const container = botao.closest('.like-container');
+            const contadorElemento = container.querySelector('.qtd');
+            let curtidas = parseInt(contadorElemento.textContent);
+
+            // Se o botão já foi curtido, remove a curtida
+            if (botao.classList.contains('curtido')) {
+                botao.classList.remove('curtido');
+                curtidas--;
+            } else {
+                // Caso contrário, adiciona a curtida
+                botao.classList.add('curtido');
+                curtidas++;
+            }
+
+            // Atualiza o valor na tela
+            contadorElemento.textContent = curtidas;
+        }
+    </script>
+</body>
+</html>
