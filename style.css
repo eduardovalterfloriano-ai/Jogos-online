@@ -1,141 +1,76 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Games | CS2 & FURIA</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-body {
-    background-color: #0d0f12 !important;
-    color: #ffffff !important;
-    padding: 20px;
-}
+        body {
+            background-color: #0d0f12 !important;
+            color: #ffffff !important;
+            padding: 20px;
+        }
 
-header {
-    background-color: #161a22;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #00ff88;
-    border-radius: 8px;
-    margin-bottom: 30px;
-}
+        header {
+            background-color: #161a22;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #00ff88;
+            border-radius: 8px;
+            margin-bottom: 30px;
+        }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
-}
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #ffffff;
+        }
 
-.logo span {
-    color: #00ff88;
-}
+        .logo span {
+            color: #00ff88;
+        }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: 600;
-}
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin-left: 15px;
+            font-weight: 600;
+        }
 
-nav a:hover {
-    color: #00ff88;
-}
+        nav a:hover {
+            color: #00ff88;
+        }
 
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-}
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
 
-h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
-}
+        h2 {
+            color: #00ff88;
+            margin-bottom: 20px;
+        }
 
-/* CARD DO POST */
-.post-card {
-    background-color: #1a1f29 !important;
-    border: 1px solid #ff4655 !important;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 4px 20px rgba(255, 70, 85, 0.2);
-}
+        /* CARD DO POST */
+        .post-card {
+            background-color: #1a1f29 !important;
+            border: 1px solid #ff4655 !important;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(255, 70, 85, 0.2);
+        }
 
-.post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.autor-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.avatar {
-    font-size: 1.2rem;
-    background: #2a3140;
-    padding: 8px;
-    border-radius: 50%;
-}
-
-.autor-info strong {
-    color: #ffffff;
-    display: block;
-}
-
-.autor-info small {
-    color: #888888;
-}
-
-.badge-post {
-    background-color: #ff4655;
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 4px 10px;
-    border-radius: 4px;
-}
-
-.post-conteudo h3 {
-    color: #00ff88;
-    margin-bottom: 10px;
-}
-
-.post-conteudo p {
-    color: #cccccc;
-    line-height: 1.6;
-}
-
-.post-footer {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #2a3140;
-}
-
-.btn-like {
-    background-color: #ff4655;
-    color: #ffffff;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: 0.2s;
-}
-
-.btn-like:hover {
-    background-color: #e03846;
-}
-
-.num-curtidas {
-    color: #ffffff;
-    font-weight: bold;
-}
+        .post-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
