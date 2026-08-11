@@ -4,7 +4,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus Games | CS2 & FURIA</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS INCLUSO DIRETO NO HTML */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background-color: #0e0f12;
+            color: #ffffff;
+            min-height: 100vh;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 40px;
+            background-color: #12141a;
+            border-bottom: 2px solid #00e676;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: #00e676;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            padding: 6px 16px;
+            border-radius: 6px;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .page-title {
+            font-size: 1.8rem;
+            margin-bottom: 24px;
+            color: #ffffff;
+        }
+
+        .grid-jogos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .card-jogo {
+            background-color: #161822;
+            border: 1px solid #252836;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .card-jogo:hover {
+            transform: translateY(-4px);
+            border-color: #00e676;
+        }
+
+        .card-jogo img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+
+        .card-info {
+            padding: 16px;
+        }
+
+        .card-info .categoria {
+            font-size: 0.75rem;
+            color: #00e676;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .card-info h3 {
+            font-size: 1.1rem;
+            margin: 8px 0 16px 0;
+        }
+
+        .btn-jogar {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            background-color: #00e676;
+            color: #0e0f12;
+            font-weight: 700;
+            text-decoration: none;
+            border-radius: 6px;
+        }
+    </style>
 </head>
 <body>
 
@@ -13,16 +123,32 @@
             NEXUS<span>GAMES</span>
         </div>
         <nav class="nav-menu">
-            <a href="#" class="nav-link active">Início</a>
+            <a href="#" class="nav-link">Início</a>
         </nav>
     </header>
 
     <main class="container">
         <h1 class="page-title">Jogos & Destaques</h1>
         <div id="grid-jogos" class="grid-jogos">
+            <div class="card-jogo">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=500&q=80" alt="CS2">
+                <div class="card-info">
+                    <span class="categoria">FPS / Competitivo</span>
+                    <h3>Counter-Strike 2</h3>
+                    <a href="#" class="btn-jogar">Acessar</a>
+                </div>
             </div>
+
+            <div class="card-jogo">
+                <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=500&q=80" alt="FURIA">
+                <div class="card-info">
+                    <span class="categoria">Notícias & Highlights</span>
+                    <h3>FURIA Esports</h3>
+                    <a href="#" class="btn-jogar">Acessar</a>
+                </div>
+            </div>
+        </div>
     </main>
 
-    <script src="script.js"></script>
 </body>
 </html>
