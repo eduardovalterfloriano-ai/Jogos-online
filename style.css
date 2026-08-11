@@ -1,75 +1,86 @@
-/* RESET E CORES GERAIS */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-color: #0f1117;
-    color: #ffffff;
+/* ESTILO DE CARD DE POST (FEED DE NOTÍCIAS) */
+.post-card {
+    background-color: #1a1f29;
+    border: 1px solid #ff4655;
+    border-radius: 12px;
     padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(255, 70, 85, 0.15);
 }
 
-/* HEADER E LINKS */
-header, .header {
+.post-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 0;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #2a2e3d;
+    margin-bottom: 15px;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #00ff88;
+.autor-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-nav a {
-    color: #ffffff !important;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: bold;
+.avatar {
+    font-size: 1.5rem;
+    background: #2a3140;
+    padding: 5px;
+    border-radius: 50%;
 }
 
-nav a:hover {
-    color: #00ff88 !important;
-}
-
-/* SEÇÃO HERO */
-.hero {
-    text-align: center;
-    padding: 40px 10px;
-    background-color: #161922;
-    border-radius: 10px;
-    margin-bottom: 40px;
-}
-
-.hero h1, .hero h2 {
+.autor-info strong {
     color: #ffffff;
-    font-size: 2.2rem;
-    margin: 10px 0;
+    display: block;
 }
 
-.hero p {
+.autor-info small {
+    color: #888888;
+}
+
+.badge-post {
+    background-color: #ff4655;
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.post-conteudo h3 {
+    color: #00ff88;
+    margin-bottom: 8px;
+}
+
+.post-conteudo p {
     color: #cccccc;
+    line-height: 1.5;
 }
 
-.btn-hero, .hero a {
-    display: inline-block;
+.post-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
     margin-top: 15px;
-    color: #00ff88 !important;
+    padding-top: 15px;
+    border-top: 1px solid #2a3140;
+}
+
+.btn-like {
+    background-color: #ff4655;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.btn-like:hover {
+    background-color: #e03846;
+}
+
+.num-curtidas {
+    color: #ffffff;
     font-weight: bold;
 }
-
-/* TÍTULOS DE SEÇÃO */
-h2 {
-    color: #00ff88;
-    margin: 25px 0 15px 0;
-}
-
-/* CARTÕES (CARDS) */
-.card
