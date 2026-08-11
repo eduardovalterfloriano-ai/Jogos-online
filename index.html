@@ -1,28 +1,53 @@
-<section id="highlights" class="container">
-    <h2>Destaques da Comunidade</h2>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Games | CS2 & FURIA</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
 
-    <article class="post-card">
-        <header class="post-header">
-            <div class="autor-info">
-                <span class="avatar">🐾</span>
-                <div>
-                    <strong>FURIA Esports</strong>
-                    <small>Publicado há 2 horas • CS2</small>
+    <header>
+        <div class="logo">NEXUS<span>GAMES</span></div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#cs2">Sobre o CS2</a>
+            <a href="#highlights">Highlights</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="highlights">
+            <h2>Destaques da Comunidade</h2>
+
+            <article class="post-card">
+                <header class="post-header">
+                    <div class="autor-info">
+                        <span class="avatar">🐾</span>
+                        <div>
+                            <strong>FURIA Esports</strong>
+                            <small>Publicado há 2 horas • CS2</small>
+                        </div>
+                    </div>
+                    <span class="badge-post">🔥 EM DESTAQUE</span>
+                </header>
+
+                <div class="post-conteudo">
+                    <h3>Jogadas Insanas e Clutches do Último Major!</h3>
+                    <p>Confira a compilação com os melhores momentos, táticas agressivas de TR e defesas impecáveis nos palcos do e-sports mundial.</p>
                 </div>
-            </div>
-            <span class="badge-post">🔥 EM DESTAQUE</span>
-        </header>
 
-        <div class="post-conteudo">
-            <h3>Jogadas Insanas e Clutches do Último Major!</h3>
-            <p>Confira a compilação com os melhores momentos, táticas agressivas de TR e defesas impecáveis nos palcos do e-sports mundial.</p>
-        </div>
+                <footer class="post-footer">
+                    <button id="btn-curtir" class="btn-like">
+                        ❤️ <span id="texto-botao">Curtir post</span>
+                    </button>
+                    <span id="contador-curtidas" class="num-curtidas">0 curtidas</span>
+                </footer>
+            </article>
+        </section>
+    </main>
 
-        <footer class="post-footer">
-            <button id="btn-curtir" class="btn-like">
-                ❤️ <span id="texto-botao">Curtir post</span>
-            </button>
-            <span id="contador-curtidas" class="num-curtidas">0 curtidas</span>
-        </footer>
-    </article>
-</section>
+    <script src="./script.js"></script>
+</body>
+</html>
