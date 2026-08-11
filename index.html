@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nexus Games | CS2 & FURIA</title>
     <style>
-        /* Estilos Gerais */
         * {
             margin: 0;
             padding: 0;
@@ -67,7 +66,6 @@
             gap: 24px;
         }
 
-        /* Card de Jogo */
         .card-jogo {
             background-color: #161822;
             border: 1px solid #252836;
@@ -114,10 +112,10 @@
             font-weight: 700;
             text-decoration: none;
             border-radius: 6px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
-        /* Área do Botão de Curtida */
+        /* Container do Botão de Curtida */
         .like-container {
             display: flex;
             align-items: center;
@@ -131,18 +129,14 @@
         .btn-like {
             background: transparent;
             border: none;
-            color: #888;
+            color: #ffffff;
             font-size: 1.2rem;
             cursor: pointer;
-            transition: color 0.2s, transform 0.2s;
+            transition: transform 0.2s ease;
         }
 
         .btn-like:hover {
-            transform: scale(1.15);
-        }
-
-        .btn-like.curtido {
-            color: #ff4757; /* Cor vermelha quando curte */
+            transform: scale(1.2);
         }
 
         .like-count {
@@ -175,7 +169,7 @@
                     <a href="#" class="btn-jogar">Acessar</a>
                     
                     <div class="like-container">
-                        <button class="btn-like" onclick="alternarCurtida(this)">❤️</button>
+                        <button class="btn-like" onclick="curtir(this)">🤍</button>
                         <span class="like-count"><span class="qtd">0</span> curtidas</span>
                     </div>
                 </div>
@@ -189,7 +183,7 @@
                     <a href="#" class="btn-jogar">Acessar</a>
 
                     <div class="like-container">
-                        <button class="btn-like" onclick="alternarCurtida(this)">❤️</button>
+                        <button class="btn-like" onclick="curtir(this)">🤍</button>
                         <span class="like-count"><span class="qtd">0</span> curtidas</span>
                     </div>
                 </div>
@@ -199,24 +193,22 @@
     </main>
 
     <script>
-        function alternarCurtida(botao) {
-            // Localiza o elemento numérico dentro do mesmo card
-            const container = botao.closest('.like-container');
-            const contadorElemento = container.querySelector('.qtd');
-            let curtidas = parseInt(contadorElemento.textContent);
+        function curtir(btn) {
+            const container = btn.closest('.like-container');
+            const qtdSpan = container.querySelector('.qtd');
+            let qtd = parseInt(qtdSpan.textContent);
 
-            // Se o botão já foi curtido, remove a curtida
-            if (botao.classList.contains('curtido')) {
-                botao.classList.remove('curtido');
-                curtidas--;
+            if (btn.classList.contains('curtido')) {
+                btn.classList.remove('curtido');
+                btn.textContent = '🤍';
+                qtd--;
             } else {
-                // Caso contrário, adiciona a curtida
-                botao.classList.add('curtido');
-                curtidas++;
+                btn.classList.add('curtido');
+                btn.textContent = '❤️';
+                qtd++;
             }
 
-            // Atualiza o valor na tela
-            contadorElemento.textContent = curtidas;
+            qtdSpan.textContent = qtd;
         }
     </script>
 </body>
