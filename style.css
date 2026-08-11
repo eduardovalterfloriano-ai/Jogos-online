@@ -1,141 +1,50 @@
+/* Configuração Geral da Página */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
 }
 
 body {
-    background-color: #0d0f12 !important;
-    color: #ffffff !important;
-    padding: 20px;
+  background-color: #0e0f12; /* Fundo escuro do site */
+  color: #ffffff;
 }
 
-header {
-    background-color: #161a22;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 2px solid #00ff88;
-    border-radius: 8px;
-    margin-bottom: 30px;
+/* Barra de Navegação (Header) */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #12141a; /* Cor do cabeçalho */
+  border-bottom: 2px solid #00e676; /* Linha verde neon inferior */
 }
 
+/* Estilo da Logo */
 .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ffffff;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: 1px;
 }
 
 .logo span {
-    color: #00ff88;
+  color: #00e676; /* Cor verde da palavra GAMES */
 }
 
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-left: 15px;
-    font-weight: 600;
+/* Botão/Link Início */
+.nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
 }
 
-nav a:hover {
-    color: #00ff88;
-}
-
-.container {
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-h2 {
-    color: #00ff88;
-    margin-bottom: 20px;
-}
-
-/* CARD DO POST */
-.post-card {
-    background-color: #1a1f29 !important;
-    border: 1px solid #ff4655 !important;
-    border-radius: 12px;
-    padding: 24px;
-    box-shadow: 0 4px 20px rgba(255, 70, 85, 0.2);
-}
-
-.post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.autor-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.avatar {
-    font-size: 1.2rem;
-    background: #2a3140;
-    padding: 8px;
-    border-radius: 50%;
-}
-
-.autor-info strong {
-    color: #ffffff;
-    display: block;
-}
-
-.autor-info small {
-    color: #888888;
-}
-
-.badge-post {
-    background-color: #ff4655;
-    color: #ffffff;
-    font-size: 0.75rem;
-    font-weight: bold;
-    padding: 4px 10px;
-    border-radius: 4px;
-}
-
-.post-conteudo h3 {
-    color: #00ff88;
-    margin-bottom: 10px;
-}
-
-.post-conteudo p {
-    color: #cccccc;
-    line-height: 1.6;
-}
-
-.post-footer {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #2a3140;
-}
-
-.btn-like {
-    background-color: #ff4655;
-    color: #ffffff;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-    font-size: 0.95rem;
-    transition: 0.2s;
-}
-
-.btn-like:hover {
-    background-color: #e03846;
-}
-
-.num-curtidas {
-    color: #ffffff;
-    font-weight: bold;
+.nav-link:hover,
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.1); /* Efeito suave no botão */
 }
